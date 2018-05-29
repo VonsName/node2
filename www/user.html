@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="jquery-3.3.1.js"></script>
+</head>
+<body>
+    <script>
+        window.onload=function () {
+            var u=document.getElementById('u');
+            var p=document.getElementById('p');
+            var reg=document.getElementById('reg');
+            reg.onclick=function(){
+                $.ajax({
+                    url:'/user',
+                    data:{"u":u.value,"p":p.value},
+                    type:'get',
+                    success:function (str) {
+                        var json=eval('('+str+')');
+                        if (json.ok){
+                            alert('成功');
+                        } else {
+                            alert(json.msg);
+                        }
+                    },
+                    error:function () {
+                        alert('异常');
+                    }
+                });
+            };
+        }
+    </script>
+    用户名：<input name="user" type="text" id="u"><br/>
+    密码：  <input name="pwd" type="password" id="p"><br/>
+    注册：  <input type="submit" value="注册" id="reg"><br/>
+    登录:   <input type="submit" value="登录" id="log"><br/>
+</body>
+</html>
