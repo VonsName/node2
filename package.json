@@ -1,0 +1,27 @@
+{
+  "name": "test552233",
+  "version": "0.0.1",
+  "dependencies": {
+    "express": "^4.16.3",
+    "mysql": "latest"
+  },
+  "scripts": {
+    "start": "node server.js"
+  },
+  "description": "测试",
+  "main": "server.js",
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/VonsName/node2.git"
+  },
+  "keywords": [
+    "测试包"
+  ],
+  "author": "fs",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/VonsName/node2/issues"
+  },
+  "homepage": "https://github.com/VonsName/node2#readme"
+}
